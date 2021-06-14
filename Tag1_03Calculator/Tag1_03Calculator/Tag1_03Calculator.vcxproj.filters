@@ -24,6 +24,9 @@
     <ClCompile Include="Tag1_03Calculator.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
+    <ClCompile Include="CalculatorFactory.cpp">
+      <Filter>Headerdateien\math</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Calculator.h">
@@ -40,6 +43,9 @@
     </ClInclude>
     <ClInclude Include="CalcClient.h">
       <Filter>Headerdateien\client</Filter>
+    </ClInclude>
+    <ClInclude Include="CalculatorFactory.h">
+      <Filter>Headerdateien</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

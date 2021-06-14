@@ -139,11 +139,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="CalculatorFactory.cpp" />
     <ClCompile Include="Tag1_03Calculator.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CalcClient.h" />
     <ClInclude Include="Calculator.h" />
+    <ClInclude Include="CalculatorFactory.h" />
     <ClInclude Include="CalculatorImpl.h" />
     <ClInclude Include="CalculatorLogger.h" />
     <ClInclude Include="CalculatorSecure.h" />
