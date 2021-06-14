@@ -13,5 +13,7 @@ namespace vw {
 			virtual double sub(double a, const double b) const  = 0;
 
 		};
+		
 	}
 }
+
