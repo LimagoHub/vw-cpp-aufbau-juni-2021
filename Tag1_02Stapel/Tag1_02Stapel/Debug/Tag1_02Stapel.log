@@ -1,0 +1,4 @@
+﻿  Tag1_02Stapel.cpp
+C:\Users\JoachimWagner\git\vw-cpp-aufbau-juni-2021\Tag1_02Stapel\Tag1_02Stapel\Stapel.h(94,17): warning C4018: ">=": Konflikt zwischen "signed" und "unsigned"
+C:\Users\JoachimWagner\git\vw-cpp-aufbau-juni-2021\Tag1_02Stapel\Tag1_02Stapel\Tag1_02Stapel.cpp(22,19): warning C4018: "<": Konflikt zwischen "signed" und "unsigned"
+  Tag1_02Stapel.vcxproj -> C:\Users\JoachimWagner\git\vw-cpp-aufbau-juni-2021\Tag1_02Stapel\Debug\Tag1_02Stapel.exe
