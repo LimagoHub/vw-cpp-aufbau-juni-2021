@@ -3,6 +3,8 @@
 class GehaltsEmpfaenger;
 class LohnEmpfaenger;
 
+
+// Contract
 class MitarbeiterVisitor
 {
 

@@ -1,7 +1,7 @@
 #pragma once
 #include "MitarbeiterVisitor.h"
-class AbstractMitarbeiterVisitor :
-    public MitarbeiterVisitor
+class AbstractMitarbeiterVisitor abstract :
+    public MitarbeiterVisitor 
 {
 public:
 	void visit(LohnEmpfaenger& lohn_empfaenger)  override

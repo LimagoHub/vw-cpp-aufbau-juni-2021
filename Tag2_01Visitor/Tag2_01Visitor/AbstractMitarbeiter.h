@@ -5,7 +5,7 @@
 #include "MitarbeiterVisitor.h"
 
 
-class AbstractMitarbeiter 
+class AbstractMitarbeiter abstract
 {
 private:
 	std::string name;
