@@ -13,6 +13,15 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Headerdateien\mitarbeiter">
+      <UniqueIdentifier>{de11c1bd-cb6e-45dc-8788-c121531d6e8b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Headerdateien\firma">
+      <UniqueIdentifier>{c14a5259-dfe7-4819-a27c-ebbdd0f5d449}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Headerdateien\mitarbeiter\visitors">
+      <UniqueIdentifier>{37f6ea14-e735-42ed-b325-30f30b10166e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Tag2_01Visitor.cpp">
@@ -20,8 +29,29 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Schwein.h">
-      <Filter>Headerdateien</Filter>
+    <ClInclude Include="Firma.h">
+      <Filter>Headerdateien\firma</Filter>
+    </ClInclude>
+    <ClInclude Include="MitarbeiterVisitor.h">
+      <Filter>Headerdateien\mitarbeiter\visitors</Filter>
+    </ClInclude>
+    <ClInclude Include="AbstractMitarbeiterVisitor.h">
+      <Filter>Headerdateien\mitarbeiter\visitors</Filter>
+    </ClInclude>
+    <ClInclude Include="AbstractMitarbeiter.h">
+      <Filter>Headerdateien\mitarbeiter</Filter>
+    </ClInclude>
+    <ClInclude Include="GehaltsEmpfaenger.h">
+      <Filter>Headerdateien\mitarbeiter</Filter>
+    </ClInclude>
+    <ClInclude Include="LohnEmpfaenger.h">
+      <Filter>Headerdateien\mitarbeiter</Filter>
+    </ClInclude>
+    <ClInclude Include="PrintVisitor.h">
+      <Filter>Headerdateien\mitarbeiter\visitors</Filter>
+    </ClInclude>
+    <ClInclude Include="ResetArbeitszeitVisitor.h">
+      <Filter>Headerdateien\mitarbeiter\visitors</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

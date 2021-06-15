@@ -142,7 +142,14 @@
     <ClCompile Include="Tag2_01Visitor.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Schwein.h" />
+    <ClInclude Include="AbstractMitarbeiter.h" />
+    <ClInclude Include="AbstractMitarbeiterVisitor.h" />
+    <ClInclude Include="Firma.h" />
+    <ClInclude Include="GehaltsEmpfaenger.h" />
+    <ClInclude Include="LohnEmpfaenger.h" />
+    <ClInclude Include="MitarbeiterVisitor.h" />
+    <ClInclude Include="PrintVisitor.h" />
+    <ClInclude Include="ResetArbeitszeitVisitor.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
