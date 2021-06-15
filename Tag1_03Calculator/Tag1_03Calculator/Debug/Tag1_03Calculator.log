@@ -1,2 +1,5 @@
-﻿  Tag1_03Calculator.cpp
+﻿  CalculatorFactory.cpp
+  Tag1_03Calculator.cpp
+  Code wird generiert...
+C:\Users\JoachimWagner\git\vw-cpp-aufbau-juni-2021\Tag1_03Calculator\Tag1_03Calculator\CalculatorFactory.cpp(12): warning C4172: Adresse einer lokalen Variablen oder eines temporären Werts ": secure" wird zurückgegeben
   Tag1_03Calculator.vcxproj -> C:\Users\JoachimWagner\git\vw-cpp-aufbau-juni-2021\Tag1_03Calculator\Debug\Tag1_03Calculator.exe

@@ -1,6 +1,7 @@
 #include <chrono>
 #include <iostream>
 #include <thread>
+#include <vector>
 
 
 
@@ -9,9 +10,10 @@
 
 
 
-
 int main()
 {
+
+
 	
 	client::CalcClient client(CalculatorFactory::createCalculator());
 	client.run();
