@@ -1,2 +1,5 @@
 ﻿  Tag2_3Singleton.cpp
-  Tag2_3Singleton.vcxproj -> C:\Users\JoachimWagner\git\vw-cpp-aufbau-juni-2021\Tag2_3Singleton\Debug\Tag2_3Singleton.exe
+C:\Users\JoachimWagner\git\vw-cpp-aufbau-juni-2021\Tag2_3Singleton\Tag2_3Singleton\Tag2_3Singleton.cpp(10,41): error C2440: "Initialisierung": "const Logger" kann nicht in "Logger &" konvertiert werden
+C:\Users\JoachimWagner\git\vw-cpp-aufbau-juni-2021\Tag2_3Singleton\Tag2_3Singleton\Tag2_3Singleton.cpp(10,17): message : Durch die Konvertierung gehen Qualifizierer verloren
+C:\Users\JoachimWagner\git\vw-cpp-aufbau-juni-2021\Tag2_3Singleton\Tag2_3Singleton\Tag2_3Singleton.cpp(15,42): error C2440: "Initialisierung": "const Logger" kann nicht in "Logger &" konvertiert werden
+C:\Users\JoachimWagner\git\vw-cpp-aufbau-juni-2021\Tag2_3Singleton\Tag2_3Singleton\Tag2_3Singleton.cpp(15,18): message : Durch die Konvertierung gehen Qualifizierer verloren

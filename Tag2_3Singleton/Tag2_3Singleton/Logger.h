@@ -3,6 +3,16 @@
 #include <ostream>
 #include <string>
 
+// Modulglobal altes private von c
+static int x;
+static void f()
+{
+	
+}
+
+
+
+
 class Logger
 {
 
@@ -13,12 +23,13 @@ public:
 
 	}
 	
-	static Logger* get_instance()
+	static Logger & get_instance() // KLassenmethode
 	{
-		return &instance;
+		static Logger  instance{};
+		return instance;
 	}
 
-	virtual void log(std::string message)
+	virtual void log(std::string message) 
 	{
 		std::cout << message << std::endl;
 	}
@@ -34,5 +45,5 @@ private:
 
 };
 
-Logger  Logger::instance{};
+
 

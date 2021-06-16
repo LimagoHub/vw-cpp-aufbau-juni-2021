@@ -14,8 +14,18 @@ class AttributedCharacter
 		characters.push_back(this);
 	}
 
+	
+
 
 public:
+	AttributedCharacter(const AttributedCharacter& other) = delete;
+	void operator = (const AttributedCharacter& other) = delete;
+	virtual ~AttributedCharacter()
+	{
+		for (auto ac : characters)
+			delete ac;
+	}
+	
 	static AttributedCharacter * get_instance(const char c, const bool bold)
 	{
 		for(auto ac: characters)

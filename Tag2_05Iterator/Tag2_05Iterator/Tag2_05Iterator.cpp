@@ -8,7 +8,7 @@ int main()
 	std::vector<int> intvec{ 10,20,30,40 };
 
 
-	for(std::vector<int>::iterator it = intvec.begin(); it!=intvec.end() ; it++ )
+	for(auto it = intvec.begin(); it!=intvec.end() ; it++ )
 		std::cout << *it << std::endl;
 
 	for(int i = 0; i < intvec.size() ; i ++)

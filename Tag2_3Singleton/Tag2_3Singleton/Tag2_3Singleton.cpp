@@ -7,15 +7,15 @@
 
 int main()
 {
-	Logger* logger = Logger::get_instance();
+	Logger &logger = Logger::get_instance();
 
 
-	logger->log("Hallo");
+	logger.log("Hallo");
 
-	Logger* logger2 = Logger::get_instance();
+	Logger &logger2 = Logger::get_instance();
 
 
-	std::cout << (logger == logger2) << "\n";
+	
 	
     std::cout << "Hello World!\n";
 }
