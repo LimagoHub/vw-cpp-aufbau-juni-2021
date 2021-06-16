@@ -23,34 +23,29 @@ public:
 	}
 };
 
-auto get_data()->std::shared_ptr<char>
+auto get_my_class_as_pointer() -> std::unique_ptr<MyClass> // Source
 {
-	return std::shared_ptr<char>{new char[10]};
-	
+	return std::unique_ptr<MyClass> { new MyClass };
+}
+
+auto do_something_with_my_class(std::unique_ptr<MyClass> ptr) // sink
+{
+	ptr->foo();
+	std::cout << "END SINK" << std::endl;
+	return ptr;
 }
 
 
 auto main() -> int
 {
+	std::unique_ptr<MyClass> myunique = get_my_class_as_pointer();
 
-	std::shared_ptr<char> data = get_data();
+	myunique->foo();
 
 	
-	std::shared_ptr<MyClass> myptr{ new MyClass };
-	
-	std::cout << myptr.use_count() << std::endl;
+	myunique = do_something_with_my_class(std::move(myunique));
 
-	std::shared_ptr<MyClass> myOtherPtr = myptr;
-	std::cout << myptr.use_count() << std::endl;
-	{
-		std::shared_ptr<MyClass> ptr3 = myptr;
-		std::cout << myptr.use_count() << std::endl;
-	}
+	myunique->foo();
 	
-	std::cout << myptr.use_count() << std::endl;
-	
-	myptr->foo();
-	
-	std::cout << "Fertig" << std::endl;
-	
+	std::cout << "END PROGRAMM" << std::endl;
 }
