@@ -142,6 +142,7 @@
     <ClCompile Include="Tag3_01Observer.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="PigTooFatListener.h" />
     <ClInclude Include="Schwein.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

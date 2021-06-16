@@ -1,20 +1,73 @@
-// Tag3_01Observer.cpp : Diese Datei enthält die Funktion "main". Hier beginnt und endet die Ausführung des Programms.
-//
 
 #include <iostream>
 
+#include "Schwein.h"
+
+class Metzger
+{
+public:
+
+	void schlachten() 
+	{
+		std::cout << "Messer wetz!\n";
+	}
+	
+};
+
+class Spediteur {
+public:
+
+	void fahren(Schwein& schwein, int kilometer) 
+	{
+		std::cout << "Wir fahren auf der Autobahn" << std::endl;
+	}
+
+};
+
+
+class MetzgerSchweinAdapter: public PigTooFatListener
+{
+	Metzger& metzger;
+public:
+	MetzgerSchweinAdapter(Metzger & metzger):metzger(metzger){}
+	void pig_too_fat(Schwein&) override
+	{
+		metzger.schlachten();
+	}
+};
+
+
+class SpediteurSchweinAdapter : public PigTooFatListener
+{
+	Spediteur& spediteur_;
+public:
+	SpediteurSchweinAdapter(Spediteur& spediteur) :spediteur_(spediteur) {}
+	void pig_too_fat(Schwein& s) override
+	{
+		spediteur_.fahren(s, 100);
+	}
+};
+
+Metzger metzger;
+Spediteur spediteur;
+
 int main()
 {
+	
+	Schwein piggy{"Miss Piggy"};
+	MetzgerSchweinAdapter a1{ metzger };
+	SpediteurSchweinAdapter a2{ spediteur };
+
+	piggy.add_pig_too_fat_listener(&a1);
+	piggy.add_pig_too_fat_listener(&a2);
+
+	for(int i = 0; i < 11; i++)
+	{
+		piggy.fressen();
+	}
+	
+	
     std::cout << "Hello World!\n";
 }
 
-// Programm ausführen: STRG+F5 oder Menüeintrag "Debuggen" > "Starten ohne Debuggen starten"
-// Programm debuggen: F5 oder "Debuggen" > Menü "Debuggen starten"
 
-// Tipps für den Einstieg: 
-//   1. Verwenden Sie das Projektmappen-Explorer-Fenster zum Hinzufügen/Verwalten von Dateien.
-//   2. Verwenden Sie das Team Explorer-Fenster zum Herstellen einer Verbindung mit der Quellcodeverwaltung.
-//   3. Verwenden Sie das Ausgabefenster, um die Buildausgabe und andere Nachrichten anzuzeigen.
-//   4. Verwenden Sie das Fenster "Fehlerliste", um Fehler anzuzeigen.
-//   5. Wechseln Sie zu "Projekt" > "Neues Element hinzufügen", um neue Codedateien zu erstellen, bzw. zu "Projekt" > "Vorhandenes Element hinzufügen", um dem Projekt vorhandene Codedateien hinzuzufügen.
-//   6. Um dieses Projekt später erneut zu öffnen, wechseln Sie zu "Datei" > "Öffnen" > "Projekt", und wählen Sie die SLN-Datei aus.
