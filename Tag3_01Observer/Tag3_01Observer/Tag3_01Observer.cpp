@@ -1,7 +1,10 @@
 
 #include <iostream>
+#include <string>
+
 
 #include "Schwein.h"
+#include <variant>
 
 class Metzger
 {
@@ -13,6 +16,8 @@ public:
 	}
 	
 };
+
+
 
 class Spediteur {
 public:
@@ -28,8 +33,22 @@ public:
 Metzger metzger;
 Spediteur spediteur;
 
+	void foo() {}
+
+
+
 int main()
 {
+
+	//auto ptr = [&d]() {d.foo(); };
+
+	auto ptr = foo;
+	
+	ptr();
+
+	
+	
+	
 	
 	Schwein piggy{"Miss Piggy"};
 	

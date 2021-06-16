@@ -76,10 +76,15 @@ public:
 
 	void fressen()
 	{
-		set_gewicht(get_gewicht() + 1);
+		this->set_gewicht(this->get_gewicht() + 1);
 	}
 
-	
+	// void fressen(Schwein * self)
+	// {
+	// 	self->gewicht++;
+	// }
+
+
 
 	Schwein& operator ++ ()
 	{
