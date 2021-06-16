@@ -25,29 +25,6 @@ public:
 };
 
 
-class MetzgerSchweinAdapter: public PigTooFatListener
-{
-	Metzger& metzger;
-public:
-	MetzgerSchweinAdapter(Metzger & metzger):metzger(metzger){}
-	void pig_too_fat(Schwein&) override
-	{
-		metzger.schlachten();
-	}
-};
-
-
-class SpediteurSchweinAdapter : public PigTooFatListener
-{
-	Spediteur& spediteur_;
-public:
-	SpediteurSchweinAdapter(Spediteur& spediteur) :spediteur_(spediteur) {}
-	void pig_too_fat(Schwein& s) override
-	{
-		spediteur_.fahren(s, 100);
-	}
-};
-
 Metzger metzger;
 Spediteur spediteur;
 
@@ -55,11 +32,11 @@ int main()
 {
 	
 	Schwein piggy{"Miss Piggy"};
-	MetzgerSchweinAdapter a1{ metzger };
-	SpediteurSchweinAdapter a2{ spediteur };
+	
 
-	piggy.add_pig_too_fat_listener(&a1);
-	piggy.add_pig_too_fat_listener(&a2);
+	piggy.add_pig_too_fat_listener([](Schwein& s) {metzger.schlachten(); });
+	piggy.add_pig_too_fat_listener([](Schwein& s) {spediteur.fahren(s, 100); });
+	
 
 	for(int i = 0; i < 11; i++)
 	{

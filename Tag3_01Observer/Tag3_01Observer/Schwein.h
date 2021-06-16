@@ -1,6 +1,7 @@
 
 #include <ostream>
 #include <vector>
+#include <functional>
 
 #include "PigTooFatListener.h"
 /*
@@ -15,7 +16,7 @@ class Schwein
 {
 private:
 
-	std::vector<PigTooFatListener *> pig_too_fat_listener; // Schritt 1 (Empfängerliste)
+	std::vector<std::function<void(Schwein&)>> pig_too_fat_listener; // Schritt 1 (Empfängerliste)
 	
 	std::string name;
 	int gewicht;
@@ -30,19 +31,19 @@ private:
 	void fire_pig_too_fat_event()
 	{
 
-		for(auto it = pig_too_fat_listener.begin(); it != pig_too_fat_listener.end(); ++it)
-		{
-			(*it)->pig_too_fat(*this);
-		}
-		// for(auto fptr: pig_too_fat_listener)
+		// for(auto it = pig_too_fat_listener.begin(); it != pig_too_fat_listener.end(); ++it)
 		// {
-		// 	fptr->pig_too_fat(*this);
+		// 	(*it)->pig_too_fat(*this);
 		// }
+		for(auto fptr: pig_too_fat_listener)
+		{
+			fptr(*this);
+		}
 	}
 
 public:
 
-	void add_pig_too_fat_listener(PigTooFatListener *listener) // Schritt 2 registrieren
+	void add_pig_too_fat_listener(std::function<void(Schwein&)>  listener) // Schritt 2 registrieren
 	{
 		pig_too_fat_listener.push_back(listener);
 	}
