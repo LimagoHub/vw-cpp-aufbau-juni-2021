@@ -1,0 +1,5 @@
+﻿  Fassade.cpp
+C:\Users\JoachimWagner\git\vw-cpp-aufbau-juni-2021\StatePatternProjekt\StatePatternProjekt\Fassade.cpp(6,31): error C2027: Verwendung des undefinierten Typs "status_a"
+C:\Users\JoachimWagner\git\vw-cpp-aufbau-juni-2021\StatePatternProjekt\StatePatternProjekt\Fassade.h(23): message : Siehe Deklaration von "status_a"
+C:\Users\JoachimWagner\git\vw-cpp-aufbau-juni-2021\StatePatternProjekt\StatePatternProjekt\Fassade.cpp(7,31): error C2027: Verwendung des undefinierten Typs "status_b"
+C:\Users\JoachimWagner\git\vw-cpp-aufbau-juni-2021\StatePatternProjekt\StatePatternProjekt\Fassade.h(24): message : Siehe Deklaration von "status_b"

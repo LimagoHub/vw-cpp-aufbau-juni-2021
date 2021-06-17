@@ -29,22 +29,43 @@ public:
 
 };
 
+class Bauer{
+public:
+
+	void vermisst(Schwein & schwein)
+	{
+		std::cout << "Tschau " << schwein.get_name() << std::endl;
+	}
+	static void zaehlt_geld(Schwein& schwein)
+	{
+		std::cout << "Bin reich " << schwein.get_name() << std::endl;
+	}
+
+};
+
 
 Metzger metzger;
 Spediteur spediteur;
+Bauer bauer;
+	
 
-	void foo() {}
+void foo(Schwein& schwein){
+	std::cout << "Demo " << schwein.get_name() << std::endl;
+}
 
+void bar()
+{
+	std::cout << "kein Schwein "  << std::endl;
+}
 
+auto ptr = [](Schwein& schwein)
+{
+	bar();
+};
 
 int main()
 {
 
-	//auto ptr = [&d]() {d.foo(); };
-
-	auto ptr = foo;
-	
-	ptr();
 
 	
 	
@@ -55,6 +76,11 @@ int main()
 
 	piggy.add_pig_too_fat_listener([](Schwein& s) {metzger.schlachten(); });
 	piggy.add_pig_too_fat_listener([](Schwein& s) {spediteur.fahren(s, 100); });
+	piggy.add_pig_too_fat_listener([](Schwein& s) {bauer.vermisst(s); });
+	piggy.add_pig_too_fat_listener(Bauer::zaehlt_geld);
+	piggy.add_pig_too_fat_listener(foo);
+	piggy.add_pig_too_fat_listener([](Schwein& s) {bar(); });
+	piggy.add_pig_too_fat_listener(ptr);
 	
 
 	for(int i = 0; i < 11; i++)
