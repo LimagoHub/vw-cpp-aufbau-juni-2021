@@ -4,18 +4,22 @@
 #include <iostream>
 #include <fstream>
 
-int main()
-{
-	std::fstream fin("C:\\Users\\JoachimWagner\\Documents\\blind.txt", std::ios::in);
 
-	int ch;
-	
-	while(fin >> std::noskipws >> ch )
-	{
-		std::cout << ch << std::endl;
-	}
-	fin.close();
-    std::cout << "Hello World!\n";
+#include "CharacterCounter.h"
+#include "FileProcessor.h"
+#include "LineCounter.h"
+
+int main()
+
+
+{
+	CharacterCounter cc;
+	LineCounter lc;
+	FileProcessor &file_processor = lc;
+
+	file_processor.run("..\\..\\Tag3_06Templates\\blind.txt");
+
+    std::cout << "\n\nHello World!\n";
 }
 
 

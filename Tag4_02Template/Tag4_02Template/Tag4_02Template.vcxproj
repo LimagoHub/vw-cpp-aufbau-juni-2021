@@ -142,7 +142,12 @@
     <ClCompile Include="Tag4_02Template.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <Text Include="..\..\..\..\Documents\blind.txt" />
+    <Text Include="..\..\Tag3_06Templates\blind.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CharacterCounter.h" />
+    <ClInclude Include="FileProcessor.h" />
+    <ClInclude Include="LineCounter.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
