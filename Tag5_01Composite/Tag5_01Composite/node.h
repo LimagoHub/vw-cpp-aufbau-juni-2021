@@ -5,7 +5,7 @@
 
 #include "abstract_node.h"
 
-class node :
+class node :  // kontogruppe (container für Kontogruppen und konten) hat keinen Saldo
     public abstract_node
 {
 	std::vector<abstract_node*> children;
@@ -38,6 +38,7 @@ protected:
 	
 	void print(std::ostream& os) const override
 	{
+		// anpassen
 		os << "Node: ";
 		abstract_node::print(os);
 	}

@@ -4,16 +4,16 @@
 #include "leaf.h"
 #include "node.h"
 
-void travers(abstract_node * item)
-{
-	std::cout << *item << std::endl;
-
-	for(auto child: item->get_children())
-	{
-		// Recursion !!!!!!!!
-		travers(child);
-	}
-}
+// void travers(abstract_node * item)
+// {
+// 	std::cout << *item << std::endl;
+//
+// 	for(auto child: item->get_children())
+// 	{
+// 		// Recursion !!!!!!!!
+// 		travers(child);
+// 	}
+// }
 
 int main()
 {
@@ -37,7 +37,9 @@ int main()
 	e2.append(&leaf3);
 	e2.append(&leaf4);
 
-	travers(&root);
+	// Ersatz für travers root.print(); // gibt sich selbst und seine Kinder und Kindeskinder ....
+	
+	// travers(&root);
 	
     
 }
