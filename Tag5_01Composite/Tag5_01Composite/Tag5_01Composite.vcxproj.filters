@@ -15,26 +15,27 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Tag4_02Template.cpp">
+    <ClCompile Include="Tag5_01Composite.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="abstract_node.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="leaf.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="node.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="..\..\Tag3_06Templates\blind.txt">
-      <Filter>Ressourcendateien</Filter>
-    </Text>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="FileProcessor.h">
+    <ClInclude Include="abstract_node.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
-    <ClInclude Include="CharacterCounter.h">
+    <ClInclude Include="leaf.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
-    <ClInclude Include="LineCounter.h">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
-    <ClInclude Include="FileCopierer.h">
+    <ClInclude Include="node.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
   </ItemGroup>

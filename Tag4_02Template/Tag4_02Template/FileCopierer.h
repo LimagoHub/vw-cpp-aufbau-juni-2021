@@ -1,23 +1,23 @@
 #pragma once
 #include "FileProcessor.h"
 
-class CharacterCounter :
-    public FileProcessor
+class FileCopierer :
+	public FileProcessor
 {
-	int counter ;
+	std::fstream fout;
 public:
 
 	void init() override
 	{
-		counter = 0;
+		fout.open("ausgabe.txt", std::ios::out);
 	}
 	void dispose() override
 	{
-		std::cout << "Characters = " << counter << std::endl;
+		fout.close();
 	}
 	void process(char c) override
 	{
-		counter++;
+		fout.put(c);
 	}
 };
 

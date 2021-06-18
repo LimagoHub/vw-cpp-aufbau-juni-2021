@@ -13,7 +13,7 @@ public:
 	}
 	void dispose() override
 	{
-		std::cout << counter << std::endl;
+		std::cout << "Lines = " << counter << std::endl;
 	}
 	void process(char c) override
 	{
