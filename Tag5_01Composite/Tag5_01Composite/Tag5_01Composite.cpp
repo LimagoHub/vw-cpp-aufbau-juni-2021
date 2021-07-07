@@ -37,7 +37,7 @@ int main()
 	e2.append(&leaf3);
 	e2.append(&leaf4);
 
-	// Ersatz für travers root.print(); // gibt sich selbst und seine Kinder und Kindeskinder ....
+	// Ersatz für travers root.ausgabe(); // gibt sich selbst und seine Kinder und Kindeskinder ....
 	
 	// travers(&root);
 	

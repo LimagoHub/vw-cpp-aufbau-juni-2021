@@ -63,6 +63,11 @@ auto ptr = [](Schwein& schwein)
 	bar();
 };
 
+
+auto adapter(Schwein& s) -> void {
+	metzger.schlachten();
+}
+
 int main()
 {
 
@@ -74,7 +79,8 @@ int main()
 	Schwein piggy{"Miss Piggy"};
 	
 
-	piggy.add_pig_too_fat_listener([](Schwein& s) {metzger.schlachten(); });
+	piggy.add_pig_too_fat_listener([](Schwein& s)->void {metzger.schlachten(); });
+	piggy.add_pig_too_fat_listener(adapter);
 	piggy.add_pig_too_fat_listener([](Schwein& s) {spediteur.fahren(s, 100); });
 	piggy.add_pig_too_fat_listener([](Schwein& s) {bauer.vermisst(s); });
 	piggy.add_pig_too_fat_listener(Bauer::zaehlt_geld);
@@ -91,5 +97,6 @@ int main()
 	
     std::cout << "Hello World!\n";
 }
+
 
 
